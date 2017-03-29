@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="quoteBook">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./style.css"></link>
+</head>
+<section class="list">
+
+
+<input type="text" placeholder="Add your name" ng-model='newName'>
+<input type="text" placeholder="Add your age" ng-model='newAge'>
+<button ng-click="addPerson()">Add</button>
+<button ng-click="clearPerson()">Clear</button>
+<div class="error" ng-show="error">
+  <p>*Name is Required</p>
+</div>
+<!-- <div>
+Filter: <input type="text" ng-model='filterText'/>
+</div> -->
+<body ng-controller="mainCtrl">
+  <p ng-repeat="person in people">
+    <span class = 'name'>{{person.name}}</span>
+    <span class = 'age'> - {{person.age}}</span>
+  </p>
+
+
+
+  </section>
+</body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/mainCtrl2.js"></script>
+</html>
